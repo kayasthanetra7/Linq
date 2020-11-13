@@ -23,7 +23,7 @@ namespace Linq
             var filteredResult = myList1.Where(a => a > 25 && a < 100);
             foreach( var num in filteredResult)
             {
-                Console.WriteLine(num);
+                Console.WriteLine("Numbers between 25 and 100 :{0}",num);
             }
             Console.WriteLine();
 
@@ -31,14 +31,14 @@ namespace Linq
             var ascendingOrder = myList1.OrderBy(b => b);
             foreach (var num2 in ascendingOrder)
             {
-                Console.WriteLine(num2);
+                Console.WriteLine("Numbers in ascending order:{0}",num2);
             }
             Console.WriteLine();
 
             var descendingOrder = myList1.OrderByDescending(c => c);
             foreach(var num3 in descendingOrder)
             {
-                Console.WriteLine(num3);
+                Console.WriteLine("Numbers in descinding order:{0}",num3);
             }
 
             // Query 3 using groupby
@@ -56,26 +56,26 @@ namespace Linq
 
             //Query 4 using All
             bool allResult = myList1.All(e => e > 12 && e < 100);
-            Console.WriteLine(allResult);
+            Console.WriteLine("Are all numbers between 12 and 100:{0}",allResult);
 
             // Query 5 for Any
             bool anyResult = myList1.Any(f => f > 12 && f < 100);
-            Console.WriteLine(anyResult);
+            Console.WriteLine("Are there any numbers between 12 and 100? :{0}",anyResult);
             Console.WriteLine();
 
             //Query 6 for Select
             var selectResult = myList1.Select(s => s);
             foreach(int num6 in selectResult )
             {
-                Console.WriteLine(num6);
+                Console.WriteLine("Give me the list:{0}",num6);
             }
             bool containsResult = myList1.Contains(10);
-            Console.WriteLine(containsResult);
+            Console.WriteLine("Contains number 10? {0}",containsResult);
             Console.WriteLine();
 
             //Query 7 for Average
             var averageResult = myList1.Average();
-            Console.WriteLine(averageResult);
+            Console.WriteLine("Average result: {0}",averageResult);
 
         }
     }
