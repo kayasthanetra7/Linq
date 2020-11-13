@@ -64,7 +64,7 @@ namespace Linq
             Console.WriteLine();
 
             //Query 6 for Select
-            var selectResult = myList1.Select(s => s);
+            var selectResult = myList1.Select(g => g);
             foreach(int num6 in selectResult )
             {
                 Console.WriteLine("Give me the list:{0}",num6);
@@ -73,9 +73,23 @@ namespace Linq
             Console.WriteLine("Contains number 10? {0}",containsResult);
             Console.WriteLine();
 
-            //Query 7 for Average
+            //Query 7 for Average, Count, Max and Sum
             var averageResult = myList1.Average();
             Console.WriteLine("Average result: {0}",averageResult);
+
+            var countResult = myList1.Count();
+            Console.WriteLine("Total number of elements: {0}", countResult);
+
+            var maxResult = myList1.Max();
+            Console.WriteLine("Maximum value: {0}", maxResult);
+
+            var sumOfElements = myList1.Sum(h =>
+            {
+                if (h % 2 == 0) return h;
+                return 0;
+            });
+            Console.WriteLine("Sum of even elements: {0}",sumOfElements);
+
 
         }
     }
