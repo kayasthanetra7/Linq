@@ -17,7 +17,7 @@ namespace Linq
             myList1.Add(20);
             myList1.Add(25);
             myList1.Add(50);
-            myList1.Add(100);
+            myList1.Add(101);
 
             // Query 1 using where
             var filteredResult = myList1.Where(a => a > 25 && a < 100);
@@ -89,7 +89,13 @@ namespace Linq
                 return 0;
             });
             Console.WriteLine("Sum of even elements: {0}",sumOfElements);
+            Console.WriteLine();
 
+            //Query 8 for ElementATDefault, firstOrDefault, LastOrDefault
+            Console.WriteLine("Element at position 3: {0}", myList1.ElementAtOrDefault(3));
+            Console.WriteLine("First element: {0}",myList1.FirstOrDefault());
+            Console.WriteLine("Last element: {0}",myList1.LastOrDefault(i => i % 2 == 0));
+            
 
         }
     }
